@@ -248,6 +248,69 @@
       transition: color 0.3s ease;
     }
 
+    /* ─── INTRODUCCIÓN ───────────────────────────────────────── */
+    .intro-section {
+      background: var(--blanco);
+      border-radius: var(--radio);
+      box-shadow: 0 4px 18px var(--sombra);
+      padding: 28px 28px 24px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .intro-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--azul), var(--verde));
+      border-radius: var(--radio) 0 0 var(--radio);
+    }
+    .intro-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 14px;
+      padding-left: 12px;
+      letter-spacing: .3px;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      padding-left: 12px;
+      margin-bottom: 18px;
+    }
+    .intro-stat {
+      background: var(--gris);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .intro-stat .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--verde);
+      line-height: 1;
+    }
+    .intro-stat .label {
+      font-size: 12.5px;
+      color: #555;
+      line-height: 1.4;
+    }
+    .intro-text {
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      color: #3d3d5c;
+      line-height: 1.75;
+      padding-left: 12px;
+    }
+    .intro-text strong { color: var(--azul); }
+
     /* ─── APA CITATION BOX ───────────────────────────────────── */
     .cita-box {
       background: var(--azul-claro);
@@ -323,6 +386,37 @@
 
   <!-- ── BODY ───────────────────────────────────────── -->
   <main class="infog-body">
+    <!-- ── INTRODUCCIÓN ───────────────────────────────── -->
+    <section class="intro-section" aria-label="Introducción al estudio">
+      <h2>¿De qué trata este estudio?</h2>
+      <div class="intro-grid">
+        <div class="intro-stat">
+          <span class="num">15</span>
+          <span class="label">escuelas participantes en un estado del noreste de EE.UU.</span>
+        </div>
+        <div class="intro-stat">
+          <span class="num">267</span>
+          <span class="label">profesionales escolares (docentes, administrativos y otros)</span>
+        </div>
+        <div class="intro-stat">
+          <span class="num">5</span>
+          <span class="label">sesiones de asistencia técnica por escuela</span>
+        </div>
+        <div class="intro-stat">
+          <span class="num">3</span>
+          <span class="label">constructos medidos: conocimiento, actitudes y autoeficacia</span>
+        </div>
+      </div>
+      <p class="intro-text">
+        Hogan et al. (2025) examinaron si un modelo de <strong>asistencia técnica (AT) de corto plazo</strong>
+        puede mejorar el conocimiento, las actitudes y la autoeficacia de profesionales escolares en temas de
+        <strong>educación inclusiva</strong>. Los participantes recibieron formación en Co-Enseñanza,
+        Diferenciación, Cultura Inclusiva, Inclusion 101 y Modificaciones/Adaptaciones. Se aplicaron
+        pre y post evaluaciones para medir el impacto real de cada paquete formativo.
+        Los resultados revelan qué puede —y qué no puede— lograr una intervención breve en este campo.
+      </p>
+    </section>
+
     <ol class="hallazgos-list">
 
       <!-- HALLAZGO 1 -->
